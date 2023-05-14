@@ -7,7 +7,6 @@ import mediapipe as mp
 import constants as c
 from tensorflow.keras.models import load_model
 import utils as util
-import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -27,7 +26,7 @@ def is_video(file):
 
 def main():
     st.header("Детекция движений на производстве")
-    #st.write("You can find sample media for testing [here](https://github.com/shreyas-jk/Baby-Action-Detection-Safety-System-Prototype/tree/main/streamlit/sample)")
+    st.write("Примеры для тестирования [here](https://drive.google.com/drive/folders/1Dlm17a-9n4bn9UoC3iq6pghwDotzrqTx?usp=sharing)")
     st.markdown("""---""")
     file_object = st.file_uploader("Загрузите видео", type=["mp4"])
 
@@ -35,7 +34,6 @@ def main():
         class_list = []
         sequence = []
     
-        # Save file
         destination = os.path.join("uploads", file_object.name)
         with open(destination, "wb") as f:
             f.write((file_object).getbuffer())
