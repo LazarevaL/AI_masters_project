@@ -26,7 +26,7 @@ def is_video(file):
 
 def main():
     st.header("Детекция движений на производстве")
-    st.write("Примеры для тестирования [here](https://drive.google.com/drive/folders/1Dlm17a-9n4bn9UoC3iq6pghwDotzrqTx?usp=sharing)")
+    st.write("Примеры для тестирования [здесь](https://drive.google.com/drive/folders/1Dlm17a-9n4bn9UoC3iq6pghwDotzrqTx?usp=sharing)")
     st.markdown("""---""")
     file_object = st.file_uploader("Загрузите видео", type=["mp4"])
 
